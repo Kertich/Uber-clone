@@ -9,17 +9,17 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2lwc2FuZyIsImEiOiJja3ZxcmxndXo0N2U2MnZxNW94e
 
 export default function Home() {
   useEffect(() => {
-    if (map.current) return; // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
+    
+    const map = new mapboxgl.Map({
+      container: "map",
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [lng, lat],
-      zoom: zoom
+      center: [-99.29011, 39.39172],
+      zoom: 3,
     });
   });
   return (
     <Wrapper>
-      <Map>Map</Map>
+      <Map id="map"></Map>
       <ActionItems>Start</ActionItems>
     </Wrapper>
   )
