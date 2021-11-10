@@ -15,6 +15,7 @@ const Map = () => {
           zoom: 3,
         });
       });
+      
 
     return <Wrapper id='map'></Wrapper>
 }
