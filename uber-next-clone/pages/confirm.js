@@ -9,8 +9,8 @@ const Confirm = () => {
     const router = useRouter()
     const { pickup, dropoff } = router.query
 
-    console.log("Pickup", pickup);
-    console.log("Dropoff", dropoff)
+    // console.log("Pickup", pickup);
+    // console.log("Dropoff", dropoff)
 
     const [ pickupCoordinates, SetPickupCoordinates ] = useState()
     const [dropoffCoordinates, setDropoffCoordinates] = useState()
@@ -62,7 +62,10 @@ const Confirm = () => {
                 <RideSelector />
                     
                 <ConfirmButtonContainer>
-                    Confirm UberX
+                    <ConfirmButton>
+                        Confirm UberX
+                    </ConfirmButton>
+                    
                 </ConfirmButtonContainer>
                 
             </RideContainer>
@@ -72,15 +75,19 @@ const Confirm = () => {
 
 export default Confirm
 
+const ConfirmButton = tw.div`
+bg-black text-white my-4 mx-4 py-2 text-center text-xl
+`
+
 const ConfirmButtonContainer = tw.div`
-bg-black text-white
+border-t-2
 `
 
 
 const Wrapper = tw.div`
-flex h-screen flex-col
+flex h-screen flex-col 
 `
 const RideContainer = tw.div`
-flex-1 flex flex-col
+flex-1 flex flex-col h-1/2
 `
 

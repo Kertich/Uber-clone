@@ -8,3 +8,5 @@
 8. Pass in location data into confirm page Done
 9. Use the passed in data to put it on the map Done
 10. Create the html for ride selector
+11. Calculate the price of the uber
+12. Add Login
