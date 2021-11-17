@@ -13,6 +13,8 @@ export default function Home() {
 
   const [user, setUser] = useState(null)
 
+  const router = useRouter()
+
   useEffect(() => {
     return onAuthStateChanged(auth, user => {
       if (user) {
@@ -22,7 +24,8 @@ export default function Home() {
         })
       } else {
         setUser(null)
-        useRouter.push('login')
+        //useRouter.push('login')
+        router.push('login')
       }
     } )
   }, [] )

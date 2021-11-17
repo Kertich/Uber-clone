@@ -12,7 +12,8 @@ const Map = (props) => {
         const map = new mapboxgl.Map({
           container: "map",
           style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
-          center: [-99.29011, 39.39172],
+         // center: [-99.29011, 39.39172],
+          center: [-1.2729285394049472, 36.8111452939167],
           zoom: 3,
         });
         if(props.pickupCoordinates){
